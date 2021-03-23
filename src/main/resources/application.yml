@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: dev
+
+task:
+  power: # 场站实时数据
+    enable: true  #是否启用
+    cron: 0 4/15 * * * ? # 每15分钟执行
+  weather: # 天气数据
+    enable: true  #是否启用
+    cron: 0 0/20 * * * ? # 每20分钟执行
+  cleanZip: # 清理压缩包
+    enable: true  #是否启用
+    cron: 0 0 0 1/7 * ? # 每周执行
